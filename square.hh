@@ -2,6 +2,7 @@
 #define SQUARE_HH
 
 #include <QWidget>
+#include <QMouseEvent>
 
 enum SquareState {
     EMPTY,
@@ -21,6 +22,9 @@ public:
 
     SquareState getCorrectState() const;
     void setCorrectState(SquareState state);
+
+protected:
+    void mousePressEvent(QMouseEvent *event);
 
 private:
     SquareState m_state;
