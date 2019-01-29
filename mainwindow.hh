@@ -9,6 +9,9 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
+
+private slots:
+    void openMapDialog();
 };
 
 #endif // MAINWINDOW_HH
