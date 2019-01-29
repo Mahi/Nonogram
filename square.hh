@@ -24,7 +24,8 @@ public:
     void setCorrectState(SquareState state);
 
 protected:
-    void mousePressEvent(QMouseEvent *event);
+    void updateColor();
+    virtual void mousePressEvent(QMouseEvent *event);
 
 private:
     SquareState m_state;
