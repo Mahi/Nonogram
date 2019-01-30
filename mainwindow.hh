@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+#include "game.hh"
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -12,6 +14,9 @@ public:
 
 private slots:
     void openMapDialog();
+
+private:
+    Game *m_game;
 };
 
 #endif // MAINWINDOW_HH

@@ -1,8 +1,8 @@
 #ifndef SQUARE_HH
 #define SQUARE_HH
 
-#include <QWidget>
 #include <QMouseEvent>
+#include <QWidget>
 
 enum SquareState {
     EMPTY,

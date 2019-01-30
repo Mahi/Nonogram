@@ -7,6 +7,7 @@
 #include <QTextStream>
 
 #include "mainwindow.hh"
+#include "game.hh"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent)
@@ -49,4 +50,6 @@ void MainWindow::openMapDialog()
         }
         map.append(row);
     }
+    m_game = new Game(map, this);
+    setCentralWidget(m_game);
 }

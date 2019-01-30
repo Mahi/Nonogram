@@ -27,11 +27,13 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    square.cpp
+    square.cpp \
+    game.cpp
 
 HEADERS += \
         mainwindow.hh \
-    square.hh
+    square.hh \
+    game.hh
 
 FORMS +=
 
