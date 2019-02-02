@@ -21,8 +21,11 @@ SquareState Square::getState() const
 
 void Square::setState(SquareState state)
 {
-    m_state = state;
-    updateColor();
+    if (state != m_state) {
+        m_state = state;
+        updateColor();
+        emit stateChanged();
+    }
 }
 
 SquareState Square::getCorrectState() const
@@ -33,6 +36,16 @@ SquareState Square::getCorrectState() const
 void Square::setCorrectState(SquareState correctState)
 {
     m_correctState = correctState;
+}
+
+bool Square::isCorrectState() const
+{
+    if (getCorrectState() == SquareState::FILLED) {
+        return getState() == SquareState::FILLED;
+    }
+    else {
+        return getState() != SquareState::FILLED;
+    }
 }
 
 void Square::updateColor()

@@ -23,9 +23,14 @@ public:
     SquareState getCorrectState() const;
     void setCorrectState(SquareState state);
 
+    bool isCorrectState() const;
+
 protected:
     void updateColor();
     virtual void mousePressEvent(QMouseEvent *event);
+
+signals:
+    void stateChanged();
 
 private:
     SquareState m_state;

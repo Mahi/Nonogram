@@ -17,6 +17,9 @@ public:
     explicit Game(QWidget *parent = nullptr);
     explicit Game(Grid<bool> grid, QWidget *parent = nullptr);
 
+public slots:
+    void checkWinCondition();
+
 private:
     QGridLayout *m_layout;
     Grid<Square*> m_grid;
